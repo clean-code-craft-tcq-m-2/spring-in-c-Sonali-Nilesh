@@ -5,6 +5,10 @@
 
 struct Stats compute_statistics(const float* numberset, int setlength) {
     struct Stats s;
+    
+    if (numberset[]== 0 && setlength ==0)
+    s.average = NaN;
+    
     int sum =0;
     for ( int a = 0 ; a < = setlength ; a++)
     {
@@ -13,23 +17,21 @@ struct Stats compute_statistics(const float* numberset, int setlength) {
     
     s.average = sum /setlength;
     
-    if (s.average == 0)
-    {
-        return NaN;
-    }
-    int res = numberset[0];
+    
+    int min_no = numberset[0];
     
     for (int i = 0; i < = setlength; i++)
     {
-        res = min(res, numberset[i]);
+      min_no = min(res, numberset[i]);
     }
-    s.min = res;
+    s.min = min_no;
     
+    int max_no = numberset[0];
     for (int j =0; j < = setlength; j++)
     {
-        res = max(res, numberset[j]);
+        max_no = max(res, numberset[j]);
     }
-    s.max = res;
+    s.max = max_no;
 }
 
 void check_and_alert(float maxThreshold, alerter_funcptr alerters[], struct Stats computedStats)
