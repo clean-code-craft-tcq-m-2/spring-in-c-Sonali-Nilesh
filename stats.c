@@ -1,10 +1,12 @@
 #include "stats.h"
-#include "math.h"
+#include <math.h>
+#include "catch.hpp"
+#include <stdlib.h>
 
 struct Stats compute_statistics(const float* numberset, int setlength) {
     struct Stats s;
     int sum =0;
-    for ( int a = 0 ; a < = setlength ; i++)
+    for ( int a = 0 ; a < = setlength ; a++)
     {
         sum = sum + numberset[a] ;
     }
