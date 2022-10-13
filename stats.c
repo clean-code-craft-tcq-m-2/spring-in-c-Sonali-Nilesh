@@ -3,22 +3,29 @@
 
 struct Stats compute_statistics(const float* numberset, int setlength) {
     struct Stats s;
-    s.average = numberset/setlength;
+    int sum =0;
+    for ( int a = 0 ; a < = setlength ; i++)
+    {
+        sum = sum + numberset[a] ;
+    }
+    
+    s.average = sum /setlength;
+    
     if (s.average == 0)
     {
         return NaN;
     }
     int res = numberset[0];
     
-    for (int i = 1; i < setlength; i++)
+    for (int i = 0; i < = setlength; i++)
     {
         res = min(res, numberset[i]);
     }
     s.min = res;
     
-    for (int i = 1; i < setlength; i++)
+    for (int j =0; j < = setlength; j++)
     {
-        res = max(res, numberset[i]);
+        res = max(res, numberset[j]);
     }
     s.max = res;
 }
