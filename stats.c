@@ -20,16 +20,16 @@ struct Stats compute_statistics(const float* numberset, int setlength) {
     
     int min_no = numberset[0];
     
-    for (int i = 0; i < = setlength; i++)
+    for (int i = 1; i < = setlength; i++)
     {
-      min_no = min(res, numberset[i]);
+      min_no = min(min_no, numberset[i]);
     }
     s.min = min_no;
     
     int max_no = numberset[0];
-    for (int j =0; j < = setlength; j++)
+    for (int j =1; j < = setlength; j++)
     {
-        max_no = max(res, numberset[j]);
+        max_no = max(max_no, numberset[j]);
     }
     s.max = max_no;
 }
