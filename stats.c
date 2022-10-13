@@ -4,7 +4,7 @@
 struct Stats compute_statistics(const float* numberset, int setlength) {
     struct Stats s;
     s.average = numberset/setlength;
-    if (s.average = 0)
+    if (s.average == 0)
     {
         return NaN;
     }
