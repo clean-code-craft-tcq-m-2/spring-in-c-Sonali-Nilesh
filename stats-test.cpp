@@ -57,7 +57,8 @@ TEST_CASE("average is NaN for empty array")
  
 float numberset[] = {};
  int setlength = sizeof(numberset) / sizeof(numberset[0]);
-   
+   float sum =0;
+    int a=0, i =0, j=0;
  s num;
  for ( a = 0 ; a < setlength ; a++)
     {
