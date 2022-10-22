@@ -16,8 +16,8 @@ int check_and_alert(float maxT, int *alert, float maxN)
     
      if (maxN > maxT)
      {
-       
-        alert = 1;
+       int a[]= {1,1};
+        int *alert[] = a[];;
         
      
      }
