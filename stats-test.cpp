@@ -127,14 +127,7 @@ extern int ledAlertCallCount;
     const float maxThreshold = 10.2;
     check_and_alert(maxThreshold, alerters, max_no);
  
- int check_and_alert(float maxT, int alert[], float maxN)
-{
-     if (maxN > maxT)
-     {
-      alert[0] =1;
-      alert[1] =1;
-     
-     }
+
    
  return 0; 
 }
