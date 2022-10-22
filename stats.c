@@ -11,9 +11,7 @@
 int check_and_alert(float maxThreshold, alerter_funcptr alerters[], float max_no)
 {
    
-   
-int emailAlertCallCount = 0;
-int ledAlertCallCount = 0;
+
    
     
      if (max_no > maxThreshold)
