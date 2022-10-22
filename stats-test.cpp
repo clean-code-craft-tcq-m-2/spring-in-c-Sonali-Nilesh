@@ -6,13 +6,7 @@
 #include <stdlib.h>
 #include <math.h>
  
- struct s
-    {
-       float average = 0.0;
-    float min = 0.0;
-    float max = 0.0;
-    
-    };  
+  
 
 TEST_CASE("reports average, minimum and maximum") 
 {
@@ -63,7 +57,7 @@ TEST_CASE("reports average, minimum and maximum")
 TEST_CASE("average is NaN for empty array")
 {
    
-float numberset[] = {1.5, 8.9, 3.2, 4.5};
+float numberset[] = {0};
  int setlength = sizeof(numberset) / sizeof(numberset[0]);
    
  struct s num;
