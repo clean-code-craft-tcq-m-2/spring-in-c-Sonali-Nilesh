@@ -34,7 +34,7 @@ struct Stats compute_statistics(const float* numberset, int setlength)
     min = min_no;
     
     float max_no = numberset[0];
-    for (int j =1; j < = setlength; j++)
+    for (int j =1; j <= setlength; j++)
     {
         max_no = std::max(max_no, numberset[j]);
     }
