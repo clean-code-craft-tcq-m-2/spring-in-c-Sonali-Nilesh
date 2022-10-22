@@ -100,8 +100,7 @@ float numberset[] = {};
 TEST_CASE("raises alerts when max is greater than threshold") {
     // create additional .c and .h files
     // containing the emailAlerter, ledAlerter functions
- extern int emailAlertCallCount;
-extern int ledAlertCallCount;
+
 
    int alerters[] = {0,0};
 
@@ -131,8 +130,8 @@ extern int ledAlertCallCount;
   alerters[1] =1;
  }
  
-     emailAlertCallCount = alerters[0];
- ledAlertCallCount = alerters[1];;
+     int emailAlertCallCount = alerters[0];
+int ledAlertCallCount = alerters[1];;
     // need a way to check if both emailAlerter, ledAlerter were called
     // you can define call-counters along with the functions, as shown below
     REQUIRE(emailAlertCallCount == 1);
