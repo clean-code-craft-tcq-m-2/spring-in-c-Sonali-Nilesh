@@ -14,7 +14,7 @@ TEST_CASE("reports average, minimum and maximum")
   float numberset[] = {1.5, 8.9, 3.2, 4.5};
  int setlength = sizeof(numberset) / sizeof(numberset[0]);
     
-    struct s calc;
+    s calc;
    
    calc.average = 0.0;
     calc.min = 0.0;
@@ -60,7 +60,7 @@ TEST_CASE("average is NaN for empty array")
 float numberset[] = {0};
  int setlength = sizeof(numberset) / sizeof(numberset[0]);
    
- struct s num;
+ s num;
    if(numberset == 0)
     {
     num.average = NAN;
