@@ -2,12 +2,20 @@
 #include <math.h>
 #include "catch.hpp"
 #include <stdlib.h>
+#include "stats.h"
 
-struct calcu t;
+Calculation ::  compute_statistics(numberset, setlength)
+{
+   float sum =0;
+    for ( int a = 0 ; a < setlength ; a++)
+    {
+        sum = sum + numberset[a] ;
+    }
+   average1 = sum /setlength;
    
-   t.average = 0.0;
-    t.min = 0.0;
-    t.max = 0.0;
+   return average1;
+   
+}
 
 
 /*
