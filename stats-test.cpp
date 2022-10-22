@@ -100,6 +100,8 @@ float numberset[] = {};
 TEST_CASE("raises alerts when max is greater than threshold") {
     // create additional .c and .h files
     // containing the emailAlerter, ledAlerter functions
+ extern int emailAlertCallCount;
+extern int ledAlertCallCount;
  int emailAlerter =0;
  int ledAlerter =0;
    int alerters[] = {emailAlerter, ledAlerter};
