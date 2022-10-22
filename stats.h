@@ -3,7 +3,7 @@
  
 
 typedef void (*alerter_funcptr)();
-void check_and_alert(float maxThreshold, alerter_funcptr alerters[], float max_no);
+int check_and_alert(float maxThreshold, alerter_funcptr alerters[], float max_no);
 
 extern int emailAlertCallCount;
 extern int ledAlertCallCount;
