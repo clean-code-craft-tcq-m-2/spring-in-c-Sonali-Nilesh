@@ -8,20 +8,21 @@
 
 
 
-int check_and_alert(float maxThreshold, int alerters[], float max_no)
+int check_and_alert(float maxT, int alert[], float maxN)
 {
    
 
    
     
-     if (max_no > maxThreshold)
+     if (maxN > maxT)
      {
-         emailAlertCallCount = 1;
-          ledAlertCallCount =1;
+        alert[] = {1,1};
+        
+     
      }
    
     
-    return alerters[emailAlertCallCount,ledAlertCallCount];
+    return alert[];
    
     
 }
