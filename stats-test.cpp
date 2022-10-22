@@ -12,7 +12,7 @@
        float average = 0.0;
     float min = 0.0;
     float max = 0.0;
-     float flag =0.0;
+     float flag;
     }; 
 
 TEST_CASE("reports average, minimum and maximum") 
@@ -81,7 +81,7 @@ float numberset[] = {};
     num.min = min_no;
     num.max = max_no;
  
- if ((num.average == NaN) && (num.min == NaN) && (num.max == NaN))
+ if ((num.average == NAN) && (num.min == NAN) && (num.max == NAN))
  {
   num.flag = 1.0;
  }
