@@ -5,13 +5,16 @@
 
 struct Stats compute_statistics(const float* numberset, int setlength) {
     struct Stats s;
+    float s.average = 0.0;
+    float s.min = 0.0;
+    float s.max = 0.0;
     
     if (numberset[]== 0 && setlength ==0)
     {
     s.average = NAN;
     }
     
-    int sum =0;
+    float sum =0;
     for ( int a = 0 ; a < = setlength ; a++)
     {
         sum = sum + numberset[a] ;
@@ -20,7 +23,7 @@ struct Stats compute_statistics(const float* numberset, int setlength) {
     s.average = sum /setlength;
     
     
-    int min_no = numberset[0];
+    float min_no = numberset[0];
     
     for (int i = 1; i < = setlength; i++)
     {
@@ -28,7 +31,7 @@ struct Stats compute_statistics(const float* numberset, int setlength) {
     }
     s.min = min_no;
     
-    int max_no = numberset[0];
+    float max_no = numberset[0];
     for (int j =1; j < = setlength; j++)
     {
         max_no = std::max(max_no, numberset[j]);
