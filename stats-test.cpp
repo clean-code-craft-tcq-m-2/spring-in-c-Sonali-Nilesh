@@ -8,14 +8,54 @@
 
 
 TEST_CASE("reports average, minimum and maximum") {
-    float numberset[] = {1.5, 8.9, 3.2, 4.5};
+   float numberset[] = {1.5, 8.9, 3.2, 4.5};
     int setlength = sizeof(numberset) / sizeof(numberset[0]);
-    struct Stats computedStats = compute_statistics(numberset, setlength);
+    struct Stats s
+    {
+       float average = 0.0;
+    float min = 0.0;
+    float max = 0.0;
+        
+    };
+    
+    struct Stats s calc;
+   calc.average = 0;
+    calc.min = 0;
+    calc.max = 0;
+
+    if (numberset == 0 && setlength ==0)
+    {
+    calc.average = NAN;
+    }
+    
+    float sum =0;
+    for ( int a = 0 ; a <= setlength ; a++)
+    {
+        sum = sum + numberset[a] ;
+    }
+   calc.average = sum /setlength;
+    
+    
+    float min_no = numberset[0];
+    
+    for (int i = 1; i <= setlength; i++)
+    {
+      min_no = std::min(min_no, numberset[i]);
+    }
+    calc.min = min_no;
+    
+   
+    float max_no = numberset[0];
+    for (int j =1; j <= setlength; j++)
+    {
+        max_no = std::max(max_no, numberset[j]);
+    }
+    calc.max = max_no;
     
     float epsilon = 0.001;
-    REQUIRE(abs(computedStats.average - 4.525) < epsilon);
-    REQUIRE(abs(computedStats.max - 8.9) < epsilon);
-    REQUIRE(abs(computedStats.min - 1.5) < epsilon);
+    REQUIRE(abs(calc.average - 4.525) < epsilon);
+    REQUIRE(abs(calc.max - 8.9) < epsilon);
+    REQUIRE(abs(calc.min - 1.5) < epsilon);
 }
 /*
 
