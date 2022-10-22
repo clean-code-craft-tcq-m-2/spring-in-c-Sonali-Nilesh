@@ -4,18 +4,7 @@
 #include <stdlib.h>
 #include "stats.h"
 
-Calculation ::  compute_statistics(numberset, setlength)
-{
-   float sum =0;
-    for ( int a = 0 ; a < setlength ; a++)
-    {
-        sum = sum + numberset[a] ;
-    }
-   average1 = sum /setlength;
-   
-   return average1;
-   
-}
+
 
 
 /*
