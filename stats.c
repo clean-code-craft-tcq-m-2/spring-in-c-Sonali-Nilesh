@@ -7,14 +7,14 @@
 
 
 
-/*
-int check_and_alert(float maxThreshold, alerter_funcptr alerters[], struct Stats computedStats)
+
+int check_and_alert(float maxThreshold, alerter_funcptr alerters[], test.max)
 {
 int emailAlertCallCount = 0;
 int ledAlertCallCount = 0;
    
     
-     if (computedStats.max > maxThreshold)
+     if (test.max > maxThreshold)
      {
          emailAlertCallCount = 1;
           ledAlertCallCount =1;
@@ -23,4 +23,4 @@ int ledAlertCallCount = 0;
     return emailAlertCallCount;
     return ledAlertCallCount;
     
-}*/
+}
