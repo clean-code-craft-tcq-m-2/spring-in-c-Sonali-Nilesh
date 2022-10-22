@@ -5,17 +5,18 @@
 #include "stats.c"
 #include <stdlib.h>
 #include <math.h>
-
-int main()
-{
  
-    struct s
+ struct s
     {
        float average = 0.0;
     float min = 0.0;
     float max = 0.0;
     float sum =0;
-    };
+    };  
+
+TEST_CASE("reports average, minimum and maximum") 
+{
+ 
     
     struct s calc;
    
@@ -45,9 +46,6 @@ int main()
         max_no = std::max(max_no, numberset[j]);
     }
     calc.max = max_no;
-
-TEST_CASE("reports average, minimum and maximum") 
-{
    float numberset[] = {1.5, 8.9, 3.2, 4.5};
  int setlength = sizeof(numberset) / sizeof(numberset[0]);
  
@@ -66,17 +64,18 @@ TEST_CASE("average is NaN for empty array")
 float numberset[] = {1.5, 8.9, 3.2, 4.5};
  int setlength = sizeof(numberset) / sizeof(numberset[0]);
    
+ struct s num
    if (numberset == 0 && setlength ==0)
     {
-    calc.average = NAN;
+    num.average = NAN;
     }
     //All fields of computedStats (average, max, min) must be
     //NAN (not-a-number), as defined in math.h
-    REQUIRE(calc.average == NAN);
+    REQUIRE(num.average == NAN);
     //Design the REQUIRE statement here.
     //Use https://stackoverflow.com/questions/1923837/how-to-use-nan-and-inf-in-c
 }
-};
+
 /*
 
 TEST_CASE("raises alerts when max is greater than threshold") {
