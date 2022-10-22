@@ -8,7 +8,7 @@
 
 
 
-int check_and_alert(float maxT, int alert[], float maxN)
+int check_and_alert(float maxT, int alert[int, int], float maxN)
 {
    
 
@@ -16,13 +16,14 @@ int check_and_alert(float maxT, int alert[], float maxN)
     
      if (maxN > maxT)
      {
-        alert[] = {1,1};
+       
+        int alert[] = {1,1};
         
      
      }
    
     
-    return alert[];
+    return 0;
    
     
 }
