@@ -86,7 +86,7 @@ float numberset[] = {r};
   num.flag = 1.0f;
  }
     
- REQUIRE (num.average == 0.0f);
+ REQUIRE (num.average == nanf);
     //All fields of computedStats (average, max, min) must be
     //NAN (not-a-number), as defined in math.h
  // REQUIRE((num.flag) == 1.0f);
