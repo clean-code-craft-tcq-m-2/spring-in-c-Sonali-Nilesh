@@ -15,7 +15,7 @@
      float flag;
     }; 
 
-TEST_CASE("reports average, minimum and maximum") 
+TEST_CASE("reports average, min and max") 
 {
  s calc;
  float sum =0;
