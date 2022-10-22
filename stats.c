@@ -4,7 +4,7 @@
 #include <stdlib.h>
 
 
-Stats compute_statistics(const float* numberset, int setlength) 
+int compute_statistics(const float* numberset, int setlength) 
 {
    struct s
    {
@@ -48,7 +48,7 @@ Stats compute_statistics(const float* numberset, int setlength)
     }
     calc.max = max_no;
    
-   return 0;
+   return calc;
   
 }
 
