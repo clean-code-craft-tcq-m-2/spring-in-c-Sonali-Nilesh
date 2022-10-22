@@ -34,7 +34,7 @@ TEST_CASE("reports average, minimum and maximum") {
     {
         sum = sum + numberset[a] ;
     }
-   calc.average = sum /setlength;
+   calc.average = sum /calc.setlength;
     
     
     float min_no = numberset[0];
