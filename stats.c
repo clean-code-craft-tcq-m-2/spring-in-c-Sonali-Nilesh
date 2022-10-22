@@ -8,7 +8,7 @@
 
 
 
-int check_and_alert(float maxT, int alert, float maxN)
+int check_and_alert(float maxT, alert [int, int], float maxN)
 {
    
 
