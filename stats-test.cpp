@@ -123,8 +123,9 @@ TEST_CASE("raises alerts when max is greater than threshold") {
  test.max = max_no;
 
     const float maxThreshold = 10.2;
-    int check_and_alert(float maxThreshold, int alerters, float max_no);
-
+    alerters[] = check_and_alert(maxThreshold, alerters, max_no);
+     emailAlertCallCount = alerters[0];
+ ledAlertCallCount = alerters[1];;
     // need a way to check if both emailAlerter, ledAlerter were called
     // you can define call-counters along with the functions, as shown below
     REQUIRE(emailAlertCallCount == 1);
