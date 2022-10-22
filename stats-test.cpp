@@ -84,7 +84,9 @@ float numberset[] = {};
     num.max = max_no;
  
  if ((num.average ==NAN) && (num.min == NAN) && (num.max == NAN))
+ {
   num.flag =1;
+ }
     
  
     //All fields of computedStats (average, max, min) must be
