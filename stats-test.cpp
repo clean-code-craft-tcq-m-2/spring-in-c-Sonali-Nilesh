@@ -6,9 +6,10 @@
 #include <stdlib.h>
 #include <math.h>
 
-
 TEST_CASE("reports average, minimum and maximum") 
 {
+   float numberset[] = {1.5, 8.9, 3.2, 4.5};
+ int setlength = sizeof(numberset) / sizeof(numberset[0]);
    
    float sum =0;
     struct s
@@ -26,9 +27,9 @@ TEST_CASE("reports average, minimum and maximum")
     calc.max = 0.0;
    
     
-   float numberset[] = {1.5, 8.9, 3.2, 4.5};
+  
     
-   int setlength = sizeof(numberset) / sizeof(numberset[0]);
+  
    
     for ( int a = 0 ; a < setlength ; a++)
     {
@@ -64,6 +65,8 @@ TEST_CASE("reports average, minimum and maximum")
 TEST_CASE("average is NaN for empty array")
 {
    
+float numberset[] = {1.5, 8.9, 3.2, 4.5};
+ int setlength = sizeof(numberset) / sizeof(numberset[0]);
    
    if (numberset == 0 && setlength ==0)
     {
