@@ -30,7 +30,7 @@ TEST_CASE("reports average, minimum and maximum") {
     }*/
     
     calc.setlength = sizeof(numberset) / sizeof(numberset[0]);
-    for ( int a = 0 ; a <= setlength ; a++)
+    for ( int a = 0 ; a <= calc.setlength ; a++)
     {
         sum = sum + numberset[a] ;
     }
@@ -39,7 +39,7 @@ TEST_CASE("reports average, minimum and maximum") {
     
     float min_no = numberset[0];
     
-    for (int i = 1; i <= setlength; i++)
+    for (int i = 1; i <= calc.setlength; i++)
     {
       min_no = std::min(min_no, numberset[i]);
     }
@@ -47,7 +47,7 @@ TEST_CASE("reports average, minimum and maximum") {
     
    
     float max_no = numberset[0];
-    for (int j =1; j <= setlength; j++)
+    for (int j =1; j <= calc.setlength; j++)
     {
         max_no = std::max(max_no, numberset[j]);
     }
