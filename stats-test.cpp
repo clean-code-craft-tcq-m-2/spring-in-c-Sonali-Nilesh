@@ -14,7 +14,7 @@
        float average = 0.0;
     float min = 0.0;
     float max = 0.0;
-     float flag =0;
+     float flag =0.0;
     }; 
 
 TEST_CASE("reports average, minimum and maximum") 
@@ -83,15 +83,15 @@ float numberset[] = {};
     num.min = min_no;
     num.max = max_no;
  
- if ((num.average ==NAN) && (num.min == NAN) && (num.max == NAN))
+ if ((num.average == nan) && (num.min == nan) && (num.max == nan))
  {
-  num.flag =1;
+  num.flag = 1.0;
  }
     
  
     //All fields of computedStats (average, max, min) must be
     //NAN (not-a-number), as defined in math.h
-  REQUIRE(abs(num.flag) == 1);
+  REQUIRE(abs(num.flag) == 1.0);
  
     //Design the REQUIRE statement here.
     //Use https://stackoverflow.com/questions/1923837/how-to-use-nan-and-inf-in-c
