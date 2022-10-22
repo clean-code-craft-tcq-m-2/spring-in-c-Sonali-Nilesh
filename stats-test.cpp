@@ -8,20 +8,29 @@
  
  struct s
     {
+  
+  float numberset[] = {1.5, 8.9, 3.2, 4.5};
+ int setlength = sizeof(numberset) / sizeof(numberset[0]);
        float average = 0.0;
     float min = 0.0;
     float max = 0.0;
     float sum =0;
-    for ( int a = 0 ; a < setlength ; a++)
+    int a=0, i =0, j=0;
+    for ( a = 0 ; a < setlength ; a++)
     {
         sum = sum + numberset[a] ;
     }
   
   float min_no = numberset[0];
     
-    for (int i = 1; i < setlength; i++)
+    for (i = 1; i < setlength; i++)
     {
       min_no = std::min(min_no, numberset[i]);
+    }
+  float max_no = numberset[0];
+    for (j =1; j < setlength; j++)
+    {
+        max_no = std::max(max_no, numberset[j]);
     }
     }; 
 
@@ -29,25 +38,18 @@
 
 TEST_CASE("reports average, minimum and maximum") 
 {
- 
-  float numberset[] = {1.5, 8.9, 3.2, 4.5};
- int setlength = sizeof(numberset) / sizeof(numberset[0]);
-    
+   float epsilon = 0.001;
     s calc;
   
    calc.average = calc.sum /setlength;
     calc.min = calc.min_no;
     
    
-    float max_no = numberset[0];
-    for (int j =1; j < setlength; j++)
-    {
-        max_no = std::max(max_no, numberset[j]);
-    }
-    calc.max = max_no;
+    
+    calc.max = calc.max_no;
   
  
-    float epsilon = 0.001;
+ 
  
  REQUIRE(abs(calc.average-4.525) < epsilon);
   REQUIRE(abs(calc.max-8.9) < epsilon);
