@@ -8,8 +8,10 @@
 
 
 
-int check_and_alert(float maxThreshold, alerter_funcptr alerters[emailAlerter, ledAlerter], float max_no)
+int check_and_alert(float maxThreshold, alerter_funcptr alerters[], float max_no)
 {
+   alerter_funcptr alerters [] = { 0, 0};
+   
 int emailAlertCallCount = 0;
 int ledAlertCallCount = 0;
    
@@ -20,7 +22,7 @@ int ledAlertCallCount = 0;
           ledAlertCallCount =1;
      }
     
-    return emailAlertCallCount;
-    return ledAlertCallCount;
+    return alerter_funcptr alerters[emailAlertCallCount,ledAlertCallCount];
+   
     
 }
