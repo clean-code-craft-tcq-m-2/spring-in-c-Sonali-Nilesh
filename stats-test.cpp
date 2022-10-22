@@ -118,7 +118,7 @@ TEST_CASE("raises alerts when max is greater than threshold") {
   {
     max_no = std::max(max_no, numberset[j]);
   }
- test.max = max_no
+ test.max = max_no;
 
     const float maxThreshold = 10.2;
     check_and_alert(maxThreshold, alerter_funcptr alerters, max_no);
