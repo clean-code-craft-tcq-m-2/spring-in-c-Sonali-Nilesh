@@ -6,6 +6,8 @@
 #include <stdlib.h>
 #include <math.h>
 
+int main()
+{
  
     struct s
     {
@@ -50,6 +52,7 @@ TEST_CASE("reports average, minimum and maximum")
  int setlength = sizeof(numberset) / sizeof(numberset[0]);
  
     float epsilon = 0.001;
+ 
  REQUIRE(abs(calc.average-4.525) < epsilon);
   REQUIRE(abs(calc.max-8.9) < epsilon);
   REQUIRE(abs(calc.min-1.5) < epsilon);
@@ -73,6 +76,7 @@ float numberset[] = {1.5, 8.9, 3.2, 4.5};
     //Design the REQUIRE statement here.
     //Use https://stackoverflow.com/questions/1923837/how-to-use-nan-and-inf-in-c
 }
+};
 /*
 
 TEST_CASE("raises alerts when max is greater than threshold") {
