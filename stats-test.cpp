@@ -6,6 +6,13 @@
 #include <stdlib.h>
 #include <math.h>
  
+ struct s
+    {
+       float average = 0.0;
+    float min = 0.0;
+    float max = 0.0;
+    
+    }; 
   
 
 TEST_CASE("reports average, minimum and maximum") 
