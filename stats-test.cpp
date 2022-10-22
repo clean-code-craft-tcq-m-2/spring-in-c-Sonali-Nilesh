@@ -61,6 +61,7 @@ TEST_CASE("average is NaN for empty array")
 float numberset[] = {};
  int setlength = sizeof(numberset) / sizeof(numberset[0]);
    float sum =0;
+  float flag =0;
     int a=0, i =0, j=0;
  s num;
  for ( a = 0 ; a < setlength ; a++)
@@ -82,11 +83,14 @@ float numberset[] = {};
     num.min = min_no;
     num.max = max_no;
  
+ if ((num.average ==NAN) && (num.min == NAN) && (num.max == NAN))
+  num.flag =1;
+    
+ 
     //All fields of computedStats (average, max, min) must be
     //NAN (not-a-number), as defined in math.h
-  // REQUIRE(abs(num.average-NAN) == NAN);
- REQUIRE(abs(num.min- NAN) == NAN);
-  REQUIRE(abs(num.max-NAN) == NAN);
+  REQUIRE(abs(num.flag) == 1);
+ 
     //Design the REQUIRE statement here.
     //Use https://stackoverflow.com/questions/1923837/how-to-use-nan-and-inf-in-c
 }
