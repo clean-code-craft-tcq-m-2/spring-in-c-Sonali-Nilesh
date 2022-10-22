@@ -32,7 +32,7 @@ for ( a = 0 ; a < calc.setlength ; a++)
   float min_no = calc.numberset[0];
   for (i = 1; i < calc.setlength; i++)
   {
-      min_no = std::min(min_no, numberset[i]);
+      min_no = std::min(min_no, calc.numberset[i]);
   }
   float max_no = calc.numberset[0];
   for (j =1; j < calc.setlength; j++)
