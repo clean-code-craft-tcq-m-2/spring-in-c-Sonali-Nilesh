@@ -11,8 +11,20 @@
        float average = 0.0;
     float min = 0.0;
     float max = 0.0;
+    float sum =0;
+    for ( int a = 0 ; a < setlength ; a++)
+    {
+        sum = sum + numberset[a] ;
+    }
+  
+  float min_no = numberset[0];
     
+    for (int i = 1; i < setlength; i++)
+    {
+      min_no = std::min(min_no, numberset[i]);
+    }
     }; 
+
   
 
 TEST_CASE("reports average, minimum and maximum") 
@@ -22,26 +34,9 @@ TEST_CASE("reports average, minimum and maximum")
  int setlength = sizeof(numberset) / sizeof(numberset[0]);
     
     s calc;
-   
-   calc.average = 0.0;
-    calc.min = 0.0;
-    calc.max = 0.0;
-   
-  float sum =0;
-    for ( int a = 0 ; a < setlength ; a++)
-    {
-        sum = sum + numberset[a] ;
-    }
-   calc.average = sum /setlength;
-    
-    
-    float min_no = numberset[0];
-    
-    for (int i = 1; i < setlength; i++)
-    {
-      min_no = std::min(min_no, numberset[i]);
-    }
-    calc.min = min_no;
+  
+   calc.average = calc.sum /setlength;
+    calc.min = calc.min_no;
     
    
     float max_no = numberset[0];
@@ -61,20 +56,20 @@ TEST_CASE("reports average, minimum and maximum")
 }
 
 
-TEST_CASE("average is NaN for empty array")
+/*TEST_CASE("average is NaN for empty array")
 {
-   
-float numberset[] = {0};
+ 
+float numberset[] = {};
  int setlength = sizeof(numberset) / sizeof(numberset[0]);
    
  s num;
-   if(numberset == 0)
-    {
-    num.average = NAN;
-    }
+ 
+ 
     //All fields of computedStats (average, max, min) must be
     //NAN (not-a-number), as defined in math.h
-    REQUIRE(num.average == NAN);
+   REQUIRE(abs(num.average = NAN);
+  REQUIRE(abs(num. = NAN);
+  REQUIRE(abs(calc.min-1.5) = NAN);
     //Design the REQUIRE statement here.
     //Use https://stackoverflow.com/questions/1923837/how-to-use-nan-and-inf-in-c
 }
