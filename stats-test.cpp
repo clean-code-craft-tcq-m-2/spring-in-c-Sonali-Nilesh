@@ -102,9 +102,8 @@ TEST_CASE("raises alerts when max is greater than threshold") {
     // containing the emailAlerter, ledAlerter functions
  extern int emailAlertCallCount;
 extern int ledAlertCallCount;
- int emailAlerter =0;
- int ledAlerter =0;
-   int alerters[] = {emailAlerter, ledAlerter};
+
+   int alerters[] = {0,0};
 
     float numberset[] = {99.8, 34.2, 4.5};
     int setlength = sizeof(numberset) / sizeof(numberset[0]);
@@ -125,12 +124,13 @@ extern int ledAlertCallCount;
  test.max = max_no;
 
     const float maxThreshold = 10.2;
-    check_and_alert(maxThreshold, alerters, max_no);
+    
+ if (test.max > maxThreshold)
+ {
+  alerters[0] =1;
+  alerters[1] =1;
+ }
  
-
-   
- return 0; 
-}
      emailAlertCallCount = alerters[0];
  ledAlertCallCount = alerters[1];;
     // need a way to check if both emailAlerter, ledAlerter were called
