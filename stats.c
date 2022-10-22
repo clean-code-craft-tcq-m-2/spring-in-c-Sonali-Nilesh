@@ -4,16 +4,24 @@
 #include <stdlib.h>
 
 
-struct Stats compute_statistics(const float* numberset, int setlength) 
+int compute_statistics(const float* numberset, int setlength) 
 {
-   
+   struct s
+   {
+      
     float average = 0.0;
     float min = 0.0;
     float max = 0.0;
+   };
+   
+   
+   struct s.average = 0;
+    struct s.min = 0;
+    struct s.max = 0;
 
     if (numberset == 0 && setlength ==0)
     {
-    average = NAN;
+    s.average = NAN;
     }
     
     float sum =0;
@@ -21,8 +29,7 @@ struct Stats compute_statistics(const float* numberset, int setlength)
     {
         sum = sum + numberset[a] ;
     }
-    
-    average = sum /setlength;
+    s.average = sum /setlength;
     
     
     float min_no = numberset[0];
@@ -31,15 +38,18 @@ struct Stats compute_statistics(const float* numberset, int setlength)
     {
       min_no = std::min(min_no, numberset[i]);
     }
-    min = min_no;
+    s.min = min_no;
     
+   
     float max_no = numberset[0];
     for (int j =1; j <= setlength; j++)
     {
         max_no = std::max(max_no, numberset[j]);
     }
-    max = max_no;
-    
+    s.max = max_no;
+   
+   return s;
+  
 }
 
 
