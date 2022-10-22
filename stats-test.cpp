@@ -25,10 +25,7 @@ TEST_CASE("reports average, minimum and maximum")
     calc.min = 0.0;
     calc.max = 0.0;
    
-    /*if (numberset == 0 && setlength ==0)
-    {
-    calc.average = NAN;
-    }*/
+    
    float numberset[] = {1.5, 8.9, 3.2, 4.5};
     
    int setlength = sizeof(numberset) / sizeof(numberset[0]);
@@ -60,12 +57,13 @@ TEST_CASE("reports average, minimum and maximum")
  REQUIRE(abs(calc.average-4.525) < epsilon);
   REQUIRE(abs(calc.max-8.9) < epsilon);
   REQUIRE(abs(calc.min-1.5) < epsilon);
-    REQUIRE(abs(Calculation.average-4.525) < epsilon);
+   
 }
 
 
-/*TEST_CASE("average is NaN for empty array") {
-    struct Stats computedStats = compute_statistics(0, 0);
+TEST_CASE("average is NaN for empty array")
+{
+   
    
    if (numberset == 0 && setlength ==0)
     {
