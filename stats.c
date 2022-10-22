@@ -4,7 +4,14 @@
 #include <stdlib.h>
 #include "stats.h"
 
-
+ int check_and_alert(float maxT, int alert[], float maxN)
+{
+     if (maxN > maxT)
+     {
+      alert[0] =1;
+      alert[1] =1;
+     
+     }
 
 
 
