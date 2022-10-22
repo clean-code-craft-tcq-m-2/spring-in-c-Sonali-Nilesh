@@ -7,7 +7,9 @@ struct Stats compute_statistics(const float* numberset, int setlength) {
     struct Stats s;
     
     if (numberset[]== 0 && setlength ==0)
+    {
     s.average = NAN;
+    }
     
     int sum =0;
     for ( int a = 0 ; a < = setlength ; a++)
@@ -33,7 +35,7 @@ struct Stats compute_statistics(const float* numberset, int setlength) {
     }
     s.max = max_no;
 }
-
+/*
 int check_and_alert(float maxThreshold, alerter_funcptr alerters[], struct Stats computedStats)
 {
 int emailAlertCallCount = 0;
@@ -49,4 +51,4 @@ int ledAlertCallCount = 0;
     return emailAlertCallCount;
     return ledAlertCallCount;
     
-}
+}*/
