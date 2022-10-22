@@ -100,9 +100,9 @@ float numberset[] = {};
 TEST_CASE("raises alerts when max is greater than threshold") {
     // create additional .c and .h files
     // containing the emailAlerter, ledAlerter functions
- alerter_funcptr emailAlerter =0;
- alerter_funcptr ledAlerter =0;
-   alerter_funcptr alerters[] = {emailAlerter, ledAlerter};
+ int emailAlerter =0;
+ int ledAlerter =0;
+   int alerters[] = {emailAlerter, ledAlerter};
 
     float numberset[] = {99.8, 34.2, 4.5};
     int setlength = sizeof(numberset) / sizeof(numberset[0]);
@@ -123,7 +123,7 @@ TEST_CASE("raises alerts when max is greater than threshold") {
  test.max = max_no;
 
     const float maxThreshold = 10.2;
-    int check_and_alert(maxThreshold, alerter_funcptr alerters, max_no);
+    int check_and_alert(maxThreshold, int alerters[], max_no);
 
     // need a way to check if both emailAlerter, ledAlerter were called
     // you can define call-counters along with the functions, as shown below
