@@ -14,14 +14,14 @@ int compute_statistics(const float* numberset, int setlength)
     float max = 0.0;
    };
    
-   
-   struct s.average = 0;
-    struct s.min = 0;
-    struct s.max = 0;
+   struct s.calc;
+   calc.average = 0;
+    calc.min = 0;
+    calc s.max = 0;
 
     if (numberset == 0 && setlength ==0)
     {
-    s.average = NAN;
+    calc.average = NAN;
     }
     
     float sum =0;
@@ -29,7 +29,7 @@ int compute_statistics(const float* numberset, int setlength)
     {
         sum = sum + numberset[a] ;
     }
-    s.average = sum /setlength;
+   calc.average = sum /setlength;
     
     
     float min_no = numberset[0];
@@ -38,7 +38,7 @@ int compute_statistics(const float* numberset, int setlength)
     {
       min_no = std::min(min_no, numberset[i]);
     }
-    s.min = min_no;
+    calc.min = min_no;
     
    
     float max_no = numberset[0];
@@ -46,9 +46,9 @@ int compute_statistics(const float* numberset, int setlength)
     {
         max_no = std::max(max_no, numberset[j]);
     }
-    s.max = max_no;
+    calc.max = max_no;
    
-   return s;
+   return 0;
   
 }
 
