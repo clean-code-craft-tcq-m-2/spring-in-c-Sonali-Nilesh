@@ -4,7 +4,7 @@
 #include <stdlib.h>
 
 
-int compute_statistics(const float* numberset, int setlength) 
+struct Stats compute_statistics(const float* numberset, int setlength) 
 {
    struct s
    {
