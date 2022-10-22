@@ -40,7 +40,7 @@ struct Stats compute_statistics(const float* numberset, int setlength)
     }
     max = max_no;
     
-};
+}
 
 
 /*
