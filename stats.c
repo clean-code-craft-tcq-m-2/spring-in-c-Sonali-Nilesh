@@ -8,13 +8,13 @@
 
 
 
-int check_and_alert(float maxThreshold, alerter_funcptr alerters[], test.max)
+int check_and_alert(float maxThreshold, alerter_funcptr alerters[], max_no)
 {
 int emailAlertCallCount = 0;
 int ledAlertCallCount = 0;
    
     
-     if (test.max > maxThreshold)
+     if (max_no > maxThreshold)
      {
          emailAlertCallCount = 1;
           ledAlertCallCount =1;
