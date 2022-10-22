@@ -3,15 +3,17 @@
 #include "catch.hpp"
 #include <stdlib.h>
 
-struct Stats compute_statistics(const float* numberset, int setlength) {
-    struct Stats s;
-    float s.average = 0.0;
-    float s.min = 0.0;
-    float s.max = 0.0;
-    
+
+struct Stats compute_statistics(const float* numberset, int setlength) 
+{
+   
+    float average = 0.0;
+    float min = 0.0;
+    float max = 0.0;
+
     if (numberset[]== 0 && setlength ==0)
     {
-    s.average = NAN;
+    average = NAN;
     }
     
     float sum =0;
@@ -20,7 +22,7 @@ struct Stats compute_statistics(const float* numberset, int setlength) {
         sum = sum + numberset[a] ;
     }
     
-    s.average = sum /setlength;
+    average = sum /setlength;
     
     
     float min_no = numberset[0];
@@ -29,15 +31,19 @@ struct Stats compute_statistics(const float* numberset, int setlength) {
     {
       min_no = std::min(min_no, numberset[i]);
     }
-    s.min = min_no;
+    min = min_no;
     
     float max_no = numberset[0];
     for (int j =1; j < = setlength; j++)
     {
         max_no = std::max(max_no, numberset[j]);
     }
-    s.max = max_no;
+    max = max_no;
+    
 }
+computedStats;
+
+
 /*
 int check_and_alert(float maxThreshold, alerter_funcptr alerters[], struct Stats computedStats)
 {
