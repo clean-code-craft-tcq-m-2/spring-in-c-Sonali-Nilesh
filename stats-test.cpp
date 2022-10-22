@@ -5,6 +5,9 @@
 #include "stats.c"
 #include <stdlib.h>
 #include <math.h>
+#ifdef NAN
+/* NAN is supported */
+#endif
  
  struct s
     {
