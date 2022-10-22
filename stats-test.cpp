@@ -10,7 +10,7 @@
 TEST_CASE("reports average, minimum and maximum") {
    float numberset[] = {1.5, 8.9, 3.2, 4.5};
     int setlength = sizeof(numberset) / sizeof(numberset[0]);
-    struct Stats s
+    struct s
     {
        float average = 0.0;
     float min = 0.0;
@@ -18,7 +18,7 @@ TEST_CASE("reports average, minimum and maximum") {
         
     };
     
-    struct Stats s calc;
+    struct s calc;
    calc.average = 0;
     calc.min = 0;
     calc.max = 0;
