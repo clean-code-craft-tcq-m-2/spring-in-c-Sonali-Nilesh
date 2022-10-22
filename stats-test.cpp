@@ -83,13 +83,13 @@ float numberset[] = {};
  
  if ((num.average == NAN) && (num.min == NAN) && (num.max == NAN))
  {
-  num.flag = 1.0;
+  num.flag = 1.0f;
  }
     
  
     //All fields of computedStats (average, max, min) must be
     //NAN (not-a-number), as defined in math.h
-  REQUIRE(abs(num.flag) == 1.0);
+  REQUIRE(num.flag) == 1.0f);
  
     //Design the REQUIRE statement here.
     //Use https://stackoverflow.com/questions/1923837/how-to-use-nan-and-inf-in-c
