@@ -6,18 +6,13 @@
 #include <stdlib.h>
 #include <math.h>
 
-TEST_CASE("reports average, minimum and maximum") 
-{
-   float numberset[] = {1.5, 8.9, 3.2, 4.5};
- int setlength = sizeof(numberset) / sizeof(numberset[0]);
-   
-   float sum =0;
+ 
     struct s
     {
        float average = 0.0;
     float min = 0.0;
     float max = 0.0;
-    
+    float sum =0;
     };
     
     struct s calc;
@@ -25,11 +20,6 @@ TEST_CASE("reports average, minimum and maximum")
    calc.average = 0.0;
     calc.min = 0.0;
     calc.max = 0.0;
-   
-    
-  
-    
-  
    
     for ( int a = 0 ; a < setlength ; a++)
     {
@@ -53,7 +43,12 @@ TEST_CASE("reports average, minimum and maximum")
         max_no = std::max(max_no, numberset[j]);
     }
     calc.max = max_no;
-    
+
+TEST_CASE("reports average, minimum and maximum") 
+{
+   float numberset[] = {1.5, 8.9, 3.2, 4.5};
+ int setlength = sizeof(numberset) / sizeof(numberset[0]);
+ 
     float epsilon = 0.001;
  REQUIRE(abs(calc.average-4.525) < epsilon);
   REQUIRE(abs(calc.max-8.9) < epsilon);
