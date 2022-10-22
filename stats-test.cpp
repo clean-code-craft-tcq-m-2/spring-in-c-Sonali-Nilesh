@@ -7,7 +7,8 @@
 #include <math.h>
 
 
-TEST_CASE("reports average, minimum and maximum") {
+TEST_CASE("reports average, minimum and maximum") 
+{
    
    float sum =0;
     struct s
@@ -61,16 +62,22 @@ TEST_CASE("reports average, minimum and maximum") {
   REQUIRE(abs(calc.min-1.5) < epsilon);
    
 }
-/*
 
-TEST_CASE("average is NaN for empty array") {
+
+/*TEST_CASE("average is NaN for empty array") {
     struct Stats computedStats = compute_statistics(0, 0);
+   
+   if (numberset == 0 && setlength ==0)
+    {
+    calc.average = NAN;
+    }
     //All fields of computedStats (average, max, min) must be
     //NAN (not-a-number), as defined in math.h
-    REQUIRE(computedStats.average == NAN);
+    REQUIRE(calc.average == NAN);
     //Design the REQUIRE statement here.
     //Use https://stackoverflow.com/questions/1923837/how-to-use-nan-and-inf-in-c
 }
+/*
 
 TEST_CASE("raises alerts when max is greater than threshold") {
     // create additional .c and .h files
