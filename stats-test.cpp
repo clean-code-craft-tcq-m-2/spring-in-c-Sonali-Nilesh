@@ -16,7 +16,8 @@
 
 TEST_CASE("reports average, minimum and maximum") 
 {
- 
+  float numberset[] = {1.5, 8.9, 3.2, 4.5};
+ int setlength = sizeof(numberset) / sizeof(numberset[0]);
     
     struct s calc;
    
@@ -46,8 +47,7 @@ TEST_CASE("reports average, minimum and maximum")
         max_no = std::max(max_no, numberset[j]);
     }
     calc.max = max_no;
-   float numberset[] = {1.5, 8.9, 3.2, 4.5};
- int setlength = sizeof(numberset) / sizeof(numberset[0]);
+  
  
     float epsilon = 0.001;
  
