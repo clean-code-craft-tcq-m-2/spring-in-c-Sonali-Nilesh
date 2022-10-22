@@ -3,7 +3,11 @@
 #include "catch.hpp"
 #include <stdlib.h>
 
-
+struct calcu t;
+   
+   t.average = 0.0;
+    t.min = 0.0;
+    t.max = 0.0;
 
 
 /*
