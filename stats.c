@@ -14,7 +14,7 @@ int compute_statistics(const float* numberset, int setlength)
     float max = 0.0;
    };
    
-   struct s.calc;
+   struct s calc;
    calc.average = 0;
     calc.min = 0;
     calc s.max = 0;
