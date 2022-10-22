@@ -14,43 +14,38 @@
        float average = 0.0;
     float min = 0.0;
     float max = 0.0;
-    float sum =0;
-    int a=0, i =0, j=0;
-    for ( a = 0 ; a < setlength ; a++)
-    {
-        sum = sum + numberset[a] ;
-    }
-  
-  float min_no = numberset[0];
     
-    for (i = 1; i < setlength; i++)
-    {
-      min_no = std::min(min_no, numberset[i]);
-    }
-  float max_no = numberset[0];
-    for (j =1; j < setlength; j++)
-    {
-        max_no = std::max(max_no, numberset[j]);
-    }
     }; 
-
-  
 
 TEST_CASE("reports average, minimum and maximum") 
 {
+ s calc;
+ float sum =0;
+    int a=0, i =0, j=0;
+
+ 
+for ( a = 0 ; a < calc.setlength ; a++)
+    {
+        sum = sum + calc.numberset[a] ;
+    }
+  
+  float min_no = calc.numberset[0];
+  for (i = 1; i < calc.setlength; i++)
+  {
+      min_no = std::min(min_no, numberset[i]);
+  }
+  float max_no = calc.numberset[0];
+  for (j =1; j < calc.setlength; j++)
+  {
+    max_no = std::max(max_no, calc.numberset[j]);
+  }
    float epsilon = 0.001;
-    s calc;
-  
-   calc.average = calc.sum /setlength;
-    calc.min = calc.min_no;
-    
    
-    
-    calc.max = calc.max_no;
   
- 
- 
- 
+   calc.average = sum /calc.setlength;
+    calc.min = min_no;
+    calc.max = max_no;
+
  REQUIRE(abs(calc.average-4.525) < epsilon);
   REQUIRE(abs(calc.max-8.9) < epsilon);
   REQUIRE(abs(calc.min-1.5) < epsilon);
