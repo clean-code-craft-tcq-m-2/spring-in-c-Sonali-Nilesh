@@ -5,9 +5,7 @@
 #include "stats.c"
 #include <stdlib.h>
 #include <math.h>
-#ifdef NAN
-/* NAN is supported */
-#endif
+
  
  struct s
     {
@@ -83,7 +81,7 @@ float numberset[] = {};
     num.min = min_no;
     num.max = max_no;
  
- if ((num.average == nan) && (num.min == nan) && (num.max == nan))
+ if ((num.average == NaN) && (num.min == NaN) && (num.max == NaN))
  {
   num.flag = 1.0;
  }
